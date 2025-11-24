@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Welcome Page</title>
+</head>
+<body>
+    <h1>Welcome Page</h1>
+    <h2>User Information</h2>
+    <p th:if="${firstname}">First Name: <span th:text="${firstname}"></span></p>
+    <p th:if="${lastname}">Last Name: <span th:text="${lastname}"></span></p>
+    
+    <div th:if="${message}" th:text="${message}"></div>
+    
+    <a href="/">Back to User Management</a>
+</body>
+</html>

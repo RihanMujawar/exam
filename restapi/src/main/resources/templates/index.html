@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Management</title>
+    <style>
+        .button-group { margin: 10px 0; }
+        .form-group { margin: 10px 0; }
+        button { margin: 5px; padding: 8px 16px; }
+    </style>
+</head>
+<body>
+    <h1>User Management System</h1>
+
+    <!-- Create User Form -->
+    <div class="form-group">
+        <h2>Add New User</h2>
+        <form action="/register" method="post">
+            <label>First Name:</label><br/>
+            <input type="text" name="firstname" required/><br/>
+            <label>Last Name:</label><br/>
+            <input type="text" name="lastname" required/><br/>
+            <button type="submit">Create User</button>
+        </form>
+    </div>
+
+    <!-- Get User Form -->
+    <div class="form-group">
+        <h2>Find User</h2>
+        <form action="/user" method="get">
+            <label>First Name:</label><br/>
+            <input type="text" name="firstname" required/><br/>
+            <button type="submit">Find User</button>
+        </form>
+    </div>
+
+    <!-- Update User Form -->
+    <div class="form-group">
+        <h2>Update User</h2>
+        <form action="/user/update" method="post">
+            <label>User ID:</label><br/>
+            <input type="number" name="id" required/><br/>
+            <label>First Name:</label><br/>
+            <input type="text" name="firstname" required/><br/>
+            <label>Last Name:</label><br/>
+            <input type="text" name="lastname" required/><br/>
+            <button type="submit">Update User</button>
+        </form>
+    </div>
+
+    <!-- Delete User Form -->
+    <div class="form-group">
+        <h2>Delete User</h2>
+        <form action="/user/delete" method="post">
+            <label>User ID:</label><br/>
+            <input type="number" name="id" required/><br/>
+            <button type="submit">Delete User</button>
+        </form>
+    </div>
+</body>
+</html>
